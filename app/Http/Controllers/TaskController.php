@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Task;//digunakan untuk menginfor model task agar bisa digunakan tanpa menuliskan namespace lengkap
 use App\Models\TaskList;//digunakan untuk menginfor model taskList agar bisa digunakan tanpa menuliskan namespace lengkap
-use Illuminate\Http\Request;
+use Illuminate\Http\Request;//Kode use Illuminate\Http\Request; digunakan dalam Laravel untuk mengimpor kelas Request dari Laravel HTTP.
 
 class TaskController extends Controller
 {
@@ -22,12 +22,16 @@ class TaskController extends Controller
     public function store(Request $request) { //(fungsi store) biasanya digunakan untuk menangani logika penyimpanan data baru ke dalam basis data
         $request->validate([
             'name' => 'required|max:100',
-            'list_id' => 'required'
+            'list_id' => 'required',
+            'description' => 'nullable|max:100',
+            'priority' => 'required|in:high,medium,low'
         ]);
 
         Task::create([ //Task::create adalah metode yang digunakan dalam Eloquent ORM di Laravel untuk membuat dan menyimpan data baru ke dalam tabel yang terkait dengan model Task.
             'name' => $request->name,
-            'list_id' => $request->list_id
+            'list_id' => $request->list_id,
+            'description' => $request->description,
+            'priority' => $request->priority
         ]);
 
 
@@ -47,6 +51,20 @@ class TaskController extends Controller
 
         Penjelasan:
 
-        return redirect()->back();
+        return redirect()->route('home');//redirect() → Fungsi helper Laravel untuk melakukan pengalihan.
+        //back() → Mengarahkan pengguna kembali ke halaman sebelumnya yang dikunjungi.
+        //return → Mengembalikan respons ke browser, sehingga proses selesai.
+    }
+    public function show($id) {
+        $task = Task::FindOrfail($id);
+
+        $data = [
+            'title' => 'Details',
+            'task' => $task,
+        ];
+        return view('pages.details', $data); 
+        //view('pages.details') → Menunjukkan bahwa Laravel akan mencari file resources/views/pages/details.blade.php.
+        //$data → Variabel $data akan diteruskan ke view tersebut agar dapat digunakan dalam tampilan.
     }
 }
+ 
