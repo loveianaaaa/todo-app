@@ -55,16 +55,46 @@ class TaskController extends Controller
         //back() → Mengarahkan pengguna kembali ke halaman sebelumnya yang dikunjungi.
         //return → Mengembalikan respons ke browser, sehingga proses selesai.
     }
-    public function show($id) {
-        $task = Task::FindOrfail($id);
-
+    public function show($id)
+    {
         $data = [
-            'title' => 'Details',
-            'task' => $task,
+            'title' => 'Task',
+            'lists' => TaskList::all(),
+            'task' => Task::findOrFail($id),
         ];
-        return view('pages.details', $data); 
-        //view('pages.details') → Menunjukkan bahwa Laravel akan mencari file resources/views/pages/details.blade.php.
-        //$data → Variabel $data akan diteruskan ke view tersebut agar dapat digunakan dalam tampilan.
+
+        return view('pages.details', $data);
+    }
+
+    public function changeList(Request $request, Task $task)
+    {
+        $request->validate([
+            'list_id' => 'required|exists:task_lists,id',
+        ]);
+
+        Task::findOrFail($task->id)->update([
+            'list_id' => $request->list_id
+        ]);
+
+        return redirect()->back()->with('success', 'List berhasil diperbarui!');
+    }
+    public function update(Request $request, Task $task)
+    {
+        $request->validate([
+            'list_id' => 'required',
+            'name' => 'required|max:100',
+            'description' => 'max:255',
+            'priority' => 'required|in:low,medium,high'
+        ]);
+
+        Task::findOrFail($task->id)->update([
+            'list_id' => $request->list_id,
+            'name' => $request->name,
+            'description' => $request->description,
+            'priority' => $request->priority
+        ]);
+
+        return redirect()->back()->with('success', 'Task berhasil diperbarui!');
     }
 }
  
