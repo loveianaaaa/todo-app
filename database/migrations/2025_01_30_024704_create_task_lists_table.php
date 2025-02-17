@@ -1,8 +1,8 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
+use Illuminate\Database\Migrations\Migration;//Ini adalah bagian dari Laravel (framework PHP) yang digunakan untuk migrasi database
+use Illuminate\Database\Schema\Blueprint;//Ini digunakan untuk mengimpor kelas Blueprint dari namespace Illuminate\Database\Schema di Laravel. 
+use Illuminate\Support\Facades\Schema;//Ini digunakan untuk mengimpor Schema dari Illuminate\Support\Facades di Laravel. Schema adalah kelas yang sangat penting dalam Laravel untuk mengelola struktur database melalui migrasi
 
 return new class extends Migration
 {
