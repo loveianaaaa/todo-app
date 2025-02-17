@@ -19,7 +19,7 @@
                     {{-- Kode tersebut adalah elemen label dalam formulir HTML yang digunakan untuk memberi                                            keterangan pada input dengan id="name". --}}
                     <input type="text" class="form-control" id="name" name="name"
                         placeholder="Masukkan nama list">
-                        {{-- Kode yang Anda berikan adalah elemen input dalam HTML yang digunakan untuk memasukkan teks. --}}
+                        {{-- Kode yang Anda berikan adalah elemen input dalam HTML yang digunakan untuk memasukkan teks.  --}}
                 </div>
             </div>
             <div class="modal-footer">
