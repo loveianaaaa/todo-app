@@ -55,19 +55,19 @@ class TaskController extends Controller
         //back() → Mengarahkan pengguna kembali ke halaman sebelumnya yang dikunjungi.
         //return → Mengembalikan respons ke browser, sehingga proses selesai.
     }
-    public function show($id)
+    public function show($id)// digunakan untuk menampilkan data berdasarkan ID tertentu. 
     {
         $data = [
-            'title' => 'Task',
-            'lists' => TaskList::all(),
-            'task' => Task::findOrFail($id),
+            'title' => 'Task',//Ini menetapkan judul halaman atau judul data yang bisa digunakan dalam tampilan (view) atau API.
+            'lists' => TaskList::all(),// Mengambil semua data dari tabel task_lists di database.
+            'task' => Task::findOrFail($id),// Mencari satu data tugas berdasarkan ID.
         ];
 
-        return view('pages.details', $data);
+        return view('pages.details', $data);//return view Mengembalikan halaman details.blade.php dengan data yang                                        dikirim dari controller. pages.details → Menunjuk ke file resources/views/pages/details.blade.php.                                                 $data → Berisi array data yang akan dikirim ke view
     }
 
     public function changeList(Request $request, Task $task)
-    {
+    { //Kode berikut adalah sebuah method dalam controller Laravel yang menerima permintaan                                                                    dari pengguna untuk mengubah Task List dari sebuah Task (tugas) tertentu
         $request->validate([
             'list_id' => 'required|exists:task_lists,id',
         ]);
@@ -79,8 +79,8 @@ class TaskController extends Controller
         return redirect()->back()->with('success', 'List berhasil diperbarui!');
     }
     public function update(Request $request, Task $task)
-    {
-        $request->validate([
+    {//Method ini digunakan dalam Laravel Controller untuk mengupdate data dari sebuah Task (tugas) yang sudah ada di database.
+        $request->validate([ //Kode di atas digunakan dalam Laravel Controller untuk melakukan                                                              validasi input sebelum data disimpan atau diperbarui dalam database.
             'list_id' => 'required',
             'name' => 'required|max:100',
             'description' => 'max:255',
@@ -95,6 +95,7 @@ class TaskController extends Controller
         ]);
 
         return redirect()->back()->with('success', 'Task berhasil diperbarui!');
+        //->Mengembalikan pengguna ke halaman sebelumnya setelah suatu aksi dilakukan.                                                                 2.2.2    ->Menampilkan pesan sukses di halaman tersebut.
     }
 }
  
