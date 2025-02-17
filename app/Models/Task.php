@@ -27,7 +27,7 @@ class Task extends Model
         'high'
     ];
 
-    public function getPriorityClassAttribute() { //untuk memdapatkan sebuah prioritas yg nantinya setiap prioritas akan                      diberikan warna sesuai kondisi
+    public function getPriorityClassAttribute() { //untuk memdapatkan sebuah prioritas yg nantinya setiap prioritas akan                                diberikan warna sesuai kondisi
         return match($this->attributes['priority']) {
             'low' => 'success',// warna hijau
             'medium' => 'warning',// warna kuning
