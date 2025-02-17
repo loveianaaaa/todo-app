@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\TaskList;
 
 class Task extends Model
-{
+{//Kode ini mendefinisikan model bernama Task di Laravel. Model ini mewakili tabel di database,                                                             dan akan digunakan untuk berinteraksi dengan data terkait task (tugas).
     protected $fillable = [ //untuk mengontrol name
         'name',
         'description',
