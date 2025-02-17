@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
     <title>{{ $title }} - {{ config('app.name') }}</title>
+    {{-- digunakan untuk menampilkan judul halaman dinamis dalam sebuah template. --}}
 
     <!-- Import bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('vendor/bootstrap/css/bootstrap.min.css') }}">
