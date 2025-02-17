@@ -7,15 +7,16 @@ use App\Models\TaskList;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class TaskSeeder extends Seeder
+class TaskSeeder extends Seeder // adalah sebuah seeder di Laravel yang digunakan untuk mengisi                                                           tabel tasks dengan data dummy atau data awal.
 {
     /**
      * Run the database seeds.
      */
-    public function run(): void
+    public function run(): void // adalah metode yang digunakan dalam Seeder di Laravel untuk                                                               menjalankan proses pengisian data ke dalam database. 
     {
         $tasks = [ // tasks adalah sebuah daftar tugas atau isi
             [
+                // isi task
                 'name' => 'Belajar Laravel',
                 'description' => 'Belajar Laravel di santri koding',
                 'is_completed' => false,
@@ -67,5 +68,6 @@ class TaskSeeder extends Seeder
         ];
 
         Task::insert($tasks);
+        //digunakan untuk menyisipkan beberapa baris data sekaligus ke dalam tabel tasks dalam database,                                                                         tanpa melalui mekanisme Eloquent model events seperti creating atau created.
     }
 }
