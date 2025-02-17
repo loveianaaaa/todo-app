@@ -17,7 +17,7 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $fillable = [
+    protected $fillable = [// properti $fillable digunakan untuk mendefinisikan atribut                                                                    mana yang dapat diisi secara massal (mass-assigned) pada model.
         'name',
         'email',
         'password',
@@ -28,7 +28,7 @@ class User extends Authenticatable
      *
      * @var list<string>
      */
-    protected $hidden = [
+    protected $hidden = [//properti $hidden digunakan untuk menentukan atribut model                                                                       yang tidak ingin ditampilkan ketika model diubah menjadi array atau JSON.
         'password',
         'remember_token',
     ];
@@ -38,7 +38,7 @@ class User extends Authenticatable
      *
      * @return array<string, string>
      */
-    protected function casts(): array
+    protected function casts(): array //, casts umumnya digunakan sebagai properti yang didefinisikan                                                        di dalam model untuk mengonversi atribut menjadi tipe data yang diinginkan
     {
         return [
             'email_verified_at' => 'datetime',
