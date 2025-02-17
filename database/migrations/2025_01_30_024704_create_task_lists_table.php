@@ -21,8 +21,9 @@ return new class extends Migration //Ini adalah contoh penggunaan anonymous clas
     /**
      * Reverse the migrations.
      */
-    public function down(): void
+    public function down(): void //digunakan untuk membalikkan atau membatalkan perubahan yang dilakukan oleh migrasi up()
     {
-        Schema::dropIfExists('task_lists');
+        Schema::dropIfExists('task_lists');//Schema::dropIfExists() adalah sebuah metode yang digunakan untuk                                         menghapus sebuah tabel dari database, hanya jika tabel tersebut ada.
+        //Dalam hal ini, task_lists adalah nama tabel yang akan dihapus.
     }
 };
