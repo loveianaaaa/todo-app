@@ -9,12 +9,12 @@ return new class extends Migration //Ini adalah contoh penggunaan anonymous clas
     /**
      * Run the migrations.
      */
-    public function up(): void
+    public function up(): void //Ini adalah deklarasi metode up() yang digunakan dalam migrasi di Laravel
     {
-        Schema::create('task_lists', function (Blueprint $table) {
-            $table->id();
-            $table->string('name')->unique();
-            $table->timestamps();
+        Schema::create('task_lists', function (Blueprint $table) {//Adalah bagian dari migrasi di Laravel yang                                        digunakan untuk membuat tabel baru di database
+            $table->id();//digunakan untuk menambahkan kolom ID ke dalam tabel yang sedang dibuat. 
+            $table->string('name')->unique();//digunakan untuk menambahkan kolom bernama name dengan tipe                                                  string ke dalam tabel, dan memastikan bahwa nilai dalam kolom name adalah unik.
+            $table->timestamps();//Digunakan dalam migrasi Laravel untuk menambahkan dua kolom waktu ke dalam tabel                                        yang sedang dibuat, yaitu created_at dan updated_at.
         });
     }
 
