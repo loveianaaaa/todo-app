@@ -51,8 +51,10 @@
     </style>
 </head>
 <body>
-    <div class="profile-card">
+    <div class="profile-card"> 
+        {{-- digunakan untuk membuat sebuah elemen yang berfungsi sebagai wadah atau kontainer untuk                                               menampilkan informasi tentang profil, misalnya profil pengguna, seseorang, atau entitas lainnya. --}}
         <img src="images/love.jpg" alt="Foto Profil" class="profile-img">
+        {{-- digunakan untuk menampilkan gambar di halaman web. --}}
         <div class="profile-name">Loveiana I.R</div>
         <div class="profile-info">Web Developer & Designer</div>
         <div class="profile-info">📍 Subang, Indonesia</div>
