@@ -4,7 +4,7 @@
              {{-- form action digunakan untuk mengarahkan data validasi store --}}
             @method('POST')
             @csrf
-            <div class="modal-header bg-success"> 
+            <div class="modal-header bg-dark"> 
                 {{-- Kode yang Anda berikan adalah bagian dari elemen modal di HTML dengan kelas modal-header yang memiliki latar belakang berwarna hijau (bg-success). Biasanya, ini digunakan dalam kerangka kerja Bootstrap untuk menampilkan header dari modal dengan gaya tertentu. --}}
                 <h1 class="modal-title fs-5" id="addListModalLabel">Tambah List</h1>
                 {{-- <h1> → Tag heading untuk menampilkan teks dengan ukuran besar.
@@ -36,7 +36,7 @@
             @method('POST')
             @csrf
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="addTaskModalLabel">Tambah Task</h1>
+                <h1 class="modal-title fs-5 text-dark" id="addTaskModalLabel">Tambah Task</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

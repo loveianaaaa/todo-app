@@ -5,7 +5,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
 @section('content')<style>
     /* ====== Background Styling dengan Efek Paralaks ====== */
     #content {
-        background: url('{{ asset('images/background.jpg') }}') center/cover fixed no-repeat;
+        background: url('{{ asset('images/bg-love.jpeg') }}') center/cover fixed no-repeat;
         color: white;
         /*  Mengatur teks tombol menjadi warna putih agar kontras dengan latar belakang gradient.*/
         min-height: 100vh;
@@ -123,7 +123,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
                 {{-- foreach adalah directive dalam Blade template Laravel yang digunakan 
                 untuk melakukan perulangan (loop) pada sebuah array atau koleksi data --}}
                 <div class="card flex-shrink-0" style="width: 18rem; max-height: 80vh;">
-                    <div class="card-header d-flex align-items-center justify-content-between bg-dark text-white">
+                    <div class="card-header d-flex align-items-center justify-content-between bg-primary text-white">
                         <h4 class="card-title">{{ $list->name }}</h4>
                         {{-- h4 class adalah elemen dalam HTML yang digunakan untuk membuat 
                         judul atau heading tingkat ke-4 --}}
@@ -210,7 +210,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
                     </div>
                 </div>
             @endforeach
-            <button type="button" class="btn btn-flex-shrink-0 bg-dark text-white" style="width: 18rem; height: fit-content;"
+            <button type="button" class="btn btn-flex-shrink-0 bg-primary text-white" style="width: 18rem; height: fit-content;"
                 data-bs-toggle="modal" data-bs-target="#addListModal">
                 {{-- (data-bs-toggle) digunakan dalam Bootstrap untuk menginisiasi interaksi 
                 dengan komponen berbasis JavaScript tanpa memerlukan kode JavaScript manual. --}}
