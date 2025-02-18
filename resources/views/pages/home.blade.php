@@ -114,7 +114,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
             <a href="{{ route('about') }}" class="nav-link">
                 <img class="rounded-circle me-lg-2" src="images/love.jpg" alt=""
                     style="width: 40px; height: 40px" />
-                <span class="d-none d-lg-inline-flex text-dark">ABOUT ME :> </span>
+                <span class="d-none d-lg-inline-flex text-dark">Identitas :> </span>
             </a>
         </div>
 
@@ -123,7 +123,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
                 {{-- foreach adalah directive dalam Blade template Laravel yang digunakan 
                 untuk melakukan perulangan (loop) pada sebuah array atau koleksi data --}}
                 <div class="card flex-shrink-0" style="width: 18rem; max-height: 80vh;">
-                    <div class="card-header d-flex align-items-center justify-content-between bg-success">
+                    <div class="card-header d-flex align-items-center justify-content-between bg-dark text-white">
                         <h4 class="card-title">{{ $list->name }}</h4>
                         {{-- h4 class adalah elemen dalam HTML yang digunakan untuk membuat 
                         judul atau heading tingkat ke-4 --}}
@@ -210,7 +210,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
                     </div>
                 </div>
             @endforeach
-            <button type="button" class="btn btn-flex-shrink-0 bg-success" style="width: 18rem; height: fit-content;"
+            <button type="button" class="btn btn-flex-shrink-0 bg-dark text-white" style="width: 18rem; height: fit-content;"
                 data-bs-toggle="modal" data-bs-target="#addListModal">
                 {{-- (data-bs-toggle) digunakan dalam Bootstrap untuk menginisiasi interaksi 
                 dengan komponen berbasis JavaScript tanpa memerlukan kode JavaScript manual. --}}

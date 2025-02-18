@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-success snavbar-dark">
+<nav class="navbar navbar-expand-lg bg-dark text-ligth  navbar-dark">
     {{-- navbar class digunakan untuk membungkus tampilan navbar --}}
     {{-- navbar expnd lg digunakan untuk membuat tampilan navbar menjadi responship --}}
     {{-- bg primary digunakan untuk mewarnai bagroun navbar menjadi berwarna biru --}}
