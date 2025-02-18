@@ -60,7 +60,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
 
     /* ====== Tombol Tambah dengan Efek Pulse ====== */
     .btn-add {
-        background: linear-gradient(135deg, #42e695, #3bb2b8);
+        background: linear-gradient(135deg, #2183e6, #228388);
         color: white;
         width: 60px;
         height: 60px;

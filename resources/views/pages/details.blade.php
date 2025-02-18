@@ -80,18 +80,21 @@
                     <h1 class="modal-title fs-6" id="editTaskModalLabel">Edit Task</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
+                <div class="modal-body"> 
+                    {{-- digunakan dalam struktur modal (kotak dialog pop-up) untuk menampung isi utama modal. --}}
                     <input type="hidden" value="{{ $task->list_id }}" name="list_id">
                     <div class="mb-3">
                         <label for="name" class="form-label">Nama</label>
                         <input type="text" class="form-control" id="name" name="name" value="{{ $task->name }}" placeholder="Masukkan nama list">
                     </div>
                     <div class="mb-3">
+                        {{-- digunakan dalam framework Bootstrap untuk memberikan margin bawah (mb - margin-bottom) sebesar 3 (0.75rem atau 12px). --}}
                         <label for="description" class="form-label">Deskripsi</label>
                         <textarea class="form-control" name="description" id="description" rows="3" placeholder="Masukkan deskripsi">{{ $task->description }}</textarea>
                     </div>
                     <div class="mb-3">
                         <label for="priority" class="form-label">Prioritas</label>
+                        {{-- digunakan untuk memberi label pada elemen formulir, dalam hal ini elemen yang memiliki id="priority" --}}
                         <select class="form-control" name="priority" id="priority">
                             <option value="low" @selected($task->priority == 'low')>Low</option>
                             <option value="medium" @selected($task->priority == 'medium')>Medium</option>
@@ -100,6 +103,7 @@
                     </div>
                 </div>
                 <div class="modal-footer">
+                    {{-- digunakan dalam struktur Bootstrap modal untuk menampung tombol aksi di bagian bawah modal,                                   seperti tombol "Tutup" atau "Simpan".  --}}
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                     <button type="submit" class="btn btn-primary">Edit</button>
                 </div>
