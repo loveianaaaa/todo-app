@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #2c7793, #e1ebef);
+            background: linear-gradient(135deg, #1518d8, #b3c4f8);
             color: #fff;
             font-family: 'Poppins', sans-serif;
         }
@@ -75,10 +75,11 @@
         {{-- digunakan untuk menampilkan gambar di halaman web. --}}
         <div class="profile-name">Loveiana I.R</div>
         <div class="profile-info">Web Developer & Designer</div>
-        <div class="profile-info">📍 Subang, Indonesia</div>
+        <p>Ngoding with Me!!!🔥</p>
+
         <div class="social-links">
-            <a href="https://www.instagram.com/l0veianaaa_?igsh=MXdlcXMyb3lybmQ4cQ=="  class="profile-btn">follow me on instagram</a>
-            <a href="https://github.com/loveianaaaa" class="profile-btn">github</a></a>
+            <a href="https://www.instagram.com/l0veianaaa_?igsh=MXdlcXMyb3lybmQ4cQ=="  class="profile-btn">follow me on instagram 📸</a>
+            <a href="https://github.com/loveianaaaa" class="profile-btn">github🐙</a></a>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
