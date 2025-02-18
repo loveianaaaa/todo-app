@@ -4,9 +4,11 @@
 {{-- Menentukan bagian konten yang dimasukkan ke dalam template utama --}}
 <div id="content" class="container pb-3">
     {{-- Elemen utama dengan ID "content" untuk styling dan responsivitas --}}
-    <div class="d-flex align-items-center justify-content-center">
-        <a href="{{ route('home') }}" class="btn btn-sm fw-bold fs-4">
+    <div class="d-flex align-items-center justify-content-between">
+        <a href="{{ url()->previous() }}" class="btn btn-sm fw-bold fs-4 ">
             <i class="bi bi-arrow-left-short"></i> kembali
+        </a>
+        
         </a>
     </div>
 

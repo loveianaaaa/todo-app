@@ -48,12 +48,30 @@
             color: #ffcc00;
             transform: scale(1.1);
         }
+        .back-btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: 0.3s;
+        }
+        .back-btn:hover {
+            background: rgba(255, 255, 255, 0.5);
+            color: #000;
+        }
     </style>
 </head>
 <body>
+    <a href="javascript:history.back()" class="back-btn">← Kembali</a>
+    {{-- Tombol kembali untuk kembali ke halaman sebelumnya --}}
     <div class="profile-card"> 
         {{-- digunakan untuk membuat sebuah elemen yang berfungsi sebagai wadah atau kontainer untuk                                               menampilkan informasi tentang profil, misalnya profil pengguna, seseorang, atau entitas lainnya. --}}
-        <img src="images/love.jpg" alt="Foto Profil" class="profile-img">
+        <img src="images/lope.jpg" alt="Foto Profil" class="profile-img">
         {{-- digunakan untuk menampilkan gambar di halaman web. --}}
         <div class="profile-name">Loveiana I.R</div>
         <div class="profile-info">Web Developer & Designer</div>
