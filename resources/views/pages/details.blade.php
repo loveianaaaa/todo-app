@@ -32,7 +32,8 @@
                     </button>
                 </div>
                 <div class="card-body">
-                    <p>{{ $task->description }}</p>
+                    <p>{{ $task->description }}</p> 
+                    {{-- Menampilkan deskripsi tugas (description) dari objek $task dalam elemen <p> (paragraf) di halaman web. --}}
                 </div>
                 <div class="card-footer">
                     <form action="{{ route('tasks.destroy', $task->id) }}" method="POST">
@@ -63,6 +64,7 @@
                         Prioritas:
                         <span class="badge text-bg-{{ $task->priorityClass }}" style="width: fit-content">
                             {{ $task->priority }}
+                            {{-- Menampilkan nilai prioritas dari objek $task di halaman web. --}}
                         </span>
                     </h6>
                 </div>
@@ -70,6 +72,7 @@
         </div>
     </div>
     <div class="modal fade" id="editTaskModal" tabindex="-1" aria-labelledby="editTaskModalLabel" aria-hidden="true">
+        {{-- Membuat modal Bootstrap untuk mengedit tugas. --}}
         <div class="modal-dialog">
             <form action="{{ route('tasks.update', $task->id) }}" method="POST" class="modal-content">
                 @method('PUT') @csrf
