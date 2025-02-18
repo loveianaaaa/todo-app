@@ -38,6 +38,15 @@ class TaskController extends Controller
         return redirect()->back();//(return redirect) dalam kode digunakan untuk mengarahkan pengguna ke halaman lain setelah melakukan aksi tertentu,seperti setelah mengirimkan form atau melakukan operasi tertentu (misalnya, menyimpan data ke database)Ini adalah bagian dari proses redirecting dalam pengembangan web.
     }
 
+    public function about() {
+        $data = [
+            'title' => 'About Me',
+        ];
+
+        return view('pages.identitas', $data);
+    }
+
+
     public function complete($id) { //(public function complete) biasanya digunakan untuk menangani logika yang berhubungan dengan menyelesaikan suatu tugas atau mengubah status suatu entitas menjadi "selesai" (complete). 
         Task::findOrFail($id)->update([ //Task::findOrFail() adalah metode Eloquent yang digunakan dalam Laravel untuk mencari sebuah entitas (model) berdasarkan primary key (biasanya ID). 
             'is_completed' => true
