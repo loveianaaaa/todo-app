@@ -114,7 +114,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
             <a href="{{ route('about') }}" class="nav-link">
                 <img class="rounded-circle me-lg-2" src="images/love.jpg" alt=""
                     style="width: 40px; height: 40px" />
-                <span class="d-none d-lg-inline-flex text-dark">Identitas :> </span>
+                <span class="d-none d-lg-inline-flex text-primary   k">Identitas :> </span>
             </a>
         </div>
 
