@@ -1,7 +1,11 @@
 @extends('layouts.app')
-
-@section('content')
+{{-- adalah sintaks dalam Blade (templating engine Laravel) yang digunakan                                                                                untuk mewarisi atau memperluas template utama (layouts.app). --}}
+@section('content') 
+{{--  digunakan untuk menentukan bagian (section) konten yang akan dimasukkan                                                                                ke dalam template utama yang menggunakan @yield('content'). --}}
     <div id="content" class="container pb-3">
+        {{-- <div id="content">Elemen <div> ini memiliki ID "content", yang bisa digunakan untuk styling CSS atau manipulasi JavaScript.
+            container → Kelas dari Bootstrap yang memberikan margin otomatis untuk membuat tata letak lebih rapi dan responsif.
+            pb-3 → Kelas Bootstrap yang memberikan padding bawah (padding-bottom) sebesar 3 (spasi Bootstrap). --}}
         <div class="d-flex aligh-items-center justify-content center">
             <a href="{{ route('home') }}" class="btn btn-sm fw-bold fs-4">
                 <i class="bi bi-arrow-left-short"></i>
@@ -10,6 +14,7 @@
         </div>
 
         @session('success')
+        {{-- digunakan untuk menampilkan pesan sukses yang disimpan dalam sesi (session). --}}
         <div class="alert alert-success alert-dismissible fade show" role="alert">
             {{ session('success') }}
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>

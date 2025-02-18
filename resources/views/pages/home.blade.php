@@ -153,6 +153,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
                                             </div>
                                             <form action="{{ route('tasks.destroy', $task->id) }}" method="POST"
                                                 style="display: inline;">
+                                                {{-- Elemen block seperti <div> atau <p> secara default akan memulai baris baru.                              Dengan display: inline;, elemen tetap berada dalam satu baris dengan elemen lainnya. --}}
                                                 @csrf
                                                 @method('DELETE')
                                                 <button type="submit" class="btn btn-sm p-0">
