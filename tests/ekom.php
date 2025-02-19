@@ -61,3 +61,20 @@ Web Server (Laragon atau XAMPP)
 Composer (Manajemen dependency PHP)
 Code Editor (VSCode, Sublime Text, Nodepad++)
 
+1.MENGGUNAKAN METODE PENGEMBANGAN PEROGRAM LARAVEL
+
+APA ITU TODO List
+To-Do List adalah daftar tugas yang perlu dikerjakan, biasanya ditulis dalam bentuk poin-poin untuk membantu mengatur pekerjaan, mengingat hal-hal penting, dan meningkatkan produktivitas.
+
+🔵 Low (Rendah)
+Tugas dengan prioritas paling rendah.
+🟡 Medium (Sedang)
+Tugas yang cukup penting, tapi tidak mendesak.
+🔴 High (Tinggi)
+Tugas dengan prioritas tertinggi.
+Harus segera diselesaikan karena berdampak besar.
+
+Task
+isi
+TASK LIST
+judul

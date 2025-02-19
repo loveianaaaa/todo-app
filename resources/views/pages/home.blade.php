@@ -91,7 +91,7 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
         }
     }
 </style>
-<div id="content" class=" min-vh-100 d-flex flex-column align-items-center py-4"> 
+<div id="content" class=" min-vh-50 d-flex flex-column align-items-center py-4"> 
     <h1 class="text-secondary fw-bold">JADWAL LATIHAN</h1>
    
     <div id="content" class="overflow-y-hidden overflow-x-hidden bg-light-50">
@@ -111,12 +111,14 @@ konten halaman untuk diubah atau diperbarui sesuai kebutuhan. --}}
         terutama dalam Blade Template Engine di Laravel (PHP). --}}
 
         <div class="nav-item dropdown">
-            <a href="{{ route('about') }}" class="nav-link">
-                <img class="rounded-circle me-lg-2" src="images/love.jpg" alt=""
+            <a href="{{ route('about') }}" class="nav-link d-flex align-items-center">
+                <img class="rounded-circle me-lg-2" src="{{ asset('images/love.jpg') }}" 
                     style="width: 40px; height: 40px" />
-                <span class="d-none d-lg-inline-flex text-primary   k">Identitas :> </span>
-            </a>
-        </div>
+                <span class="btn btn-outline-primary btn-sm">Identitas :></span>
+            </a>
+        </div>
+        
+        
 
         <div class="d-flex gap-3 px-3 flex-nowrap overflow-x-scroll overflow-y-hidden" style="height: 100vh;">
             @foreach ($lists as $list) 
