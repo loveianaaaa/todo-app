@@ -7,7 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
-            background: linear-gradient(135deg, #1518d8, #b3c4f8);
+            background: linear-gradient(135deg, #272adb, #5f667c);
             color: #fff;
             font-family: 'Poppins', sans-serif;
         }
