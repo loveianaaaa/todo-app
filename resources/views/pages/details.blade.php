@@ -5,11 +5,10 @@
 <div id="content" class="container pb-3">
     {{-- Elemen utama dengan ID "content" untuk styling dan responsivitas --}}
     <div class="d-flex align-items-center justify-content-between">
-        <a href="{{ url()->previous() }}" class="btn btn-sm fw-bold fs-4 ">
-            <i class="bi bi-arrow-left-short"></i> kembali
+        <a href="javascript:history.back();" class="btn btn-sm fw-bold fs-4">
+            <i class="bi bi-arrow-left-short"></i> Kembali
         </a>
         
-        </a>
     </div>
 
     @session('success')
@@ -52,6 +51,10 @@
                     <h3 class="fw-bold fs-5 text-truncate mb-0">Details</h3>
                 </div>
                 <div class="card-body d-flex flex-column gap-2">
+                    {{-- card-body → Bagian isi dari komponen kartu Bootstrap.
+                    d-flex → Mengaktifkan Flexbox untuk tata letak yang fleksibel.
+                    flex-column → Menyusun elemen anak secara vertikal (dari atas ke bawah).
+                    gap-2 → Memberikan jarak antar elemen sebesar 2 (sekitar 0.5rem atau 8px). --}}
                     <form action="{{ route('tasks.changeList', $task->id) }}" method="POST">
                         @csrf @method('PATCH')
                         <select class="form-select" name="list_id" onchange="this.form.submit()">
@@ -63,6 +66,8 @@
                         </select>
                     </form>
                     <h6 class="fs-6">
+                        {{-- <h6> → Tag heading level 6, biasanya digunakan untuk judul atau subjudul kecil.
+                        class="fs-6" → Kelas Bootstrap yang mengatur ukuran font sesuai skala Bootstrap --}}
                         Prioritas:
                         <span class="badge text-bg-{{ $task->priorityClass }}" style="width: fit-content">
                             {{ $task->priority }}

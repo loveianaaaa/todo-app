@@ -50,3 +50,14 @@ Jika ingin membuat aplikasi menggunakan PHP, ada beberapa konsep dan metode yang
 PHP dengan HTML (Sederhana)
 PHP dengan Konsep MVC (Model-View-Controller)
 CMS Berbasis PHP (Tanpa Koding)
+
+PRE-REQUISITE
+Pemahaman
+Dasar HTML, CSS, dan Javascript
+Dasar PHP (variable, array, loop, function)
+Konsep database (MySQL, SQLite, PostgreSQL)
+Tools
+Web Server (Laragon atau XAMPP)
+Composer (Manajemen dependency PHP)
+Code Editor (VSCode, Sublime Text, Nodepad++)
+
