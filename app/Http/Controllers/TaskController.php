@@ -43,13 +43,13 @@ class TaskController extends Controller
             'title' => 'About Me',
         ];
 
-        return view('pages.identitas', $data);
+        return view('pages.about', $data);
     }
 
 
     public function complete($id) { //(public function complete) biasanya digunakan untuk menangani logika yang berhubungan dengan menyelesaikan suatu tugas atau mengubah status suatu entitas menjadi "selesai" (complete). 
         Task::findOrFail($id)->update([ //Task::findOrFail() adalah metode Eloquent yang digunakan dalam Laravel untuk mencari sebuah entitas (model) berdasarkan primary key (biasanya ID). 
-            'is_completed' => true
+            'is_completed' => true  
         ]);
 
         return redirect()->back();

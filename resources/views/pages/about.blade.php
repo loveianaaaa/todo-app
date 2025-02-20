@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{-- digunakan dalam HTML untuk mengontrol cara halaman ditampilkan di perangkat mobile. --}}
     <title>Identitas Diri</title>
+    {{-- digunakan untuk menentukan judul halaman web yang akan ditampilkan di tab browser atau hasil pencarian Google. --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -78,6 +80,7 @@
         <p>Ngoding with Me!!!🔥</p>
 
         <div class="social-links">
+            {{-- adalah wadah (container) yang biasanya digunakan untuk menampung tautan (link) ke media                                                  sosial seperti Facebook, Twitter, Instagram, dll. --}}
             <a href="https://www.instagram.com/l0veianaaa_?igsh=MXdlcXMyb3lybmQ4cQ=="  class="profile-btn">follow me on instagram 📸</a>
             <a href="https://github.com/loveianaaaa" class="profile-btn">github🐙</a></a>
         </div>

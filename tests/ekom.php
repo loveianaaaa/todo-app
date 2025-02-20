@@ -78,3 +78,35 @@ Task
 isi
 TASK LIST
 judul
+
+quoted adalah perintah
+select=unutk memilih
+row=baris
+from=dari
+where=dimana
+
+
+SELECT priority FROM tasks WHERE priority = 'medium';
+=memilih  kolom priority dari tabel task untuk menampilkan status medium 
+
+varcar=kombinasi hurup dan angka yang panjang nya tidak disesuaikan
+id pake= integer
+char=kombinasi hurup dan angka yang panjang nya udah disesuaikan
+
+id=untuk mengidentifikasi sebuah data atau sebuah objek(task)
+name=untuk mengidentifikasi data nama pada sebuah task
+descripsi=untuk membuat suatu data task lebih spesifik
+is_complet=untuk mengidentifikasi suatu task sudah selesai atau belum
+priority=untuk megindentifikasi suatu prioritas atau setatus Task
+created_at=untuk mengidentifikasi tanggal pembuatan Task
+update_at=untuk mengidentifikasi tanggal pembaruan dari sebuah Task
+list_id=untuk mengidentifikasi sebuah data atau sebuah objek(list)
+
+name=
+type=
+NUL=nilai kosong 
+default=bawaan
+extra=opsi tambahan
+action
+ change=untuk mengedit
+ drop=menghapus

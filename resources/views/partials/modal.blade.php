@@ -23,6 +23,7 @@
                 </div>
             </div>
             <div class="modal-footer">
+                {{-- digunakan dalam desain antarmuka berbasis Bootstrap atau framework lain yang mendukung modal (kotak dialog popup). --}}
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Batal</button>
                 <button type="submit" class="btn btn-primary">Tambah</button>
             </div>
